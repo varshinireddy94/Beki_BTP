@@ -33,6 +33,7 @@ st.set_page_config(
 INK = "#1f2933"
 MUTED = "#52606d"
 NAVY = "#0b3954"
+LINKEDIN_URL = "https://www.linkedin.com/in/varshini-reddy-sathineni-80b86428a/"
 VIEW_GEO = "Geographic map (basemap)"
 VIEW_XY = "Grid coordinates (X / Y axes)"
 
@@ -137,6 +138,14 @@ html, body, [class*="css"], .stMarkdown, .stText, button, input, select, textare
 .step-card { background:#fff; border:1px solid #e1e7ee; border-radius:12px; padding:16px; height:100%; }
 .step-card .k { width:30px; height:30px; border-radius:50%; background:#0b3954; color:#fff;
   display:flex; align-items:center; justify-content:center; font-weight:800; margin-bottom:8px; }
+.sb-credit { margin-top: 14px; padding: 10px 12px; border-radius: 10px;
+  background: #13405c; font-size: .82rem; line-height: 1.5; }
+.sb-credit a { color: #7cc4e4 !important; text-decoration: none; font-weight: 600; }
+.sb-credit a:hover { text-decoration: underline; }
+.app-footer { margin-top: 36px; padding: 16px 0 4px; border-top: 1px solid #dde3ea;
+  text-align: center; font-size: .86rem; color: #52606d; }
+.app-footer a { color: #0b6e99; font-weight: 600; text-decoration: none; }
+.app-footer a:hover { text-decoration: underline; }
 .stTabs [data-baseweb="tab-list"] { gap: 6px; }
 .stTabs [data-baseweb="tab"] { background:#eef2f6; border-radius:8px 8px 0 0; padding:8px 18px; font-weight:600; }
 .stTabs [aria-selected="true"] { background:#0b3954 !important; color:#fff !important; }
@@ -367,6 +376,10 @@ def sidebar(masks):
             f'Validation MAE {MODEL_INFO["Validation MAE"]} · R² '
             f'{MODEL_INFO["Validation R²"]}<br>Grid: 286 × 600 curvilinear '
             f'cells</div>', unsafe_allow_html=True)
+        st.markdown(
+            f'<div class="sb-credit">Built by <b>Varshini Reddy Sathineni</b>'
+            f'<br><a href="{LINKEDIN_URL}" target="_blank">'
+            f'Connect on LinkedIn ↗</a></div>', unsafe_allow_html=True)
     return dict(q_in=q_in, gen=gen, view=view, basemap=basemap,
                 opacity=opacity, coverage=coverage, outline=outline,
                 qa=qa, qb=qb, cmp=cmp_btn)
@@ -878,6 +891,12 @@ def main():
         comparison_tab(settings, grid, geom, masks, area)
     with tab_about:
         about_tab(mu.load_build_info(), masks)
+
+    st.markdown(
+        f'<div class="app-footer">BEKI FLOOD WATCH · Built by '
+        f'<b>Varshini Reddy Sathineni</b> · '
+        f'<a href="{LINKEDIN_URL}" target="_blank">LinkedIn ↗</a></div>',
+        unsafe_allow_html=True)
 
 
 def dashboard(q, settings, grid, geom, masks, area):
