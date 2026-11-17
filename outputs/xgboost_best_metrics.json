@@ -1,0 +1,10 @@
+{
+    "config": "XGB_3",
+    "max_depth": 10,
+    "learning_rate": 0.03,
+    "min_child_weight": 10,
+    "best_iteration": 3497,
+    "MAE": 0.8607996501884412,
+    "RMSE": 14.313989492432388,
+    "R2": 0.5928916710884692
+}

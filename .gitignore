@@ -1,0 +1,14 @@
+# Python environment and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Large training/validation datasets (too big for GitHub; rebuild with scripts/)
+outputs/*.parquet
+
+# Editor / OS files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

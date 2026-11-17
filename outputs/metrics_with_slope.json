@@ -1,0 +1,15 @@
+{
+    "model": "LightGBM with slope",
+    "features": [
+        "Q",
+        "X",
+        "Y",
+        "bed_elevation",
+        "NDWI_avg",
+        "slope_degrees"
+    ],
+    "MAE": 1.3386136713531798,
+    "RMSE": 18.249227111147988,
+    "R2": 0.3382749865748178,
+    "best_iteration": 2000
+}

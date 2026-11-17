@@ -1,0 +1,15 @@
+{
+    "model": "XGBoost Regressor",
+    "features": [
+        "Q",
+        "X",
+        "Y",
+        "bed_elevation",
+        "NDWI_avg",
+        "slope_degrees"
+    ],
+    "MAE": 1.1321279044536183,
+    "RMSE": 17.586897114688167,
+    "R2": 0.3854361008066519,
+    "best_iteration": 2499
+}

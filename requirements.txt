@@ -1,0 +1,14 @@
+pandas
+numpy
+pyarrow
+scikit-learn
+xgboost
+lightgbm
+matplotlib
+seaborn
+joblib
+streamlit>=1.40
+plotly>=6.0
+pyproj
+rasterio
+reportlab

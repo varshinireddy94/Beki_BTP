@@ -1,0 +1,10 @@
+{
+    "config": "Config_4",
+    "num_leaves": 63,
+    "min_child_samples": 200,
+    "learning_rate": 0.05,
+    "best_iteration": 2996,
+    "MAE": 1.126283146881095,
+    "RMSE": 18.435236285931886,
+    "R2": 0.32471668978698176
+}
